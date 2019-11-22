@@ -1,5 +1,10 @@
+@font-face{
+  font-family:"Montserrat - Medium";
+  src: url(<ruta_url>) [format()][,url(<ruta_url>) [format()]]*;
+}
+
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -19,4 +24,354 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.rectangulo{
+  display: flex;
+  width: 100%;
+  height: 136px;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.75);
+  background-image: radial-gradient(840px 840px at 0% 0%, #051739 0%, #020e29 17%, #000518 42%, #000212 60%, #000111 64%, #00000e 98%);  
+}
+
+/* 43.5 */
+.logo{
+  height: 59px;
+  /* margin-top: 38px; */
+  margin-left: 2%;
+}
+
+.marginNav{
+  margin-top: 9px;
+}
+.nav-link {
+  /* color: rgba(0,0,0,.5); */
+  margin-top: 51px  !important;
+  /* margin-left: 2%; */
+  display: inline  !important;
+  color: #ffffff  !important;
+  font-family: "Montserrat - Medium"  !important;
+  font-size: 18px  !important;
+  font-weight: 500 !important;
+  letter-spacing: 2.24px  !important;
+  line-height: 30.38px  !important;
+  margin-left: 2rem !important;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: #e3b419 !important;
+}
+.navUnete{
+  height: 46px;
+  margin-left: 2rem;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url(./Assets/menu.svg) !important;
+}
+
+.imagenPrincipal{
+  width: 100%;
+}
+
+.fondoAmarillo{
+  background-color: #e3b419;
+}
+
+
+.imagenConoceme{
+  width: 141px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.conoceme{
+  display: grid;
+}
+
+.conocemeTitulo{
+  /* Style for "Conóceme" */
+color: #080744;
+font-family: "Montserrat - Bold";
+font-size: 35px;
+font-weight: 700;
+line-height: 61px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.conocemeTxt{
+  width: 57%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #e3b419;
+  font-family: "Montserrat - Regular";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.12px;
+  line-height: 35.6px;
+  margin-bottom: 150px;
+}
+
+.experiencia{
+  display:flex;
+}
+.gradienteExp{
+  width: 20%;
+  height: 100vh;
+  background-image: linear-gradient(to right, #00000e 2%, #000111 36%, #01061a 62%, #030f2b 86%, #051739 100%);
+}
+
+.imagenExperiencia{
+  background-image: url(./Assets/imagenExperiencia.png) ;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  width: 80%;
+}
+
+.variosLayer{
+  width: 333px;
+  margin-top: 68px;
+  margin-left: -114px;
+}
+
+.experienciaTitulo{
+  color: #ffffff;
+  font-family: "Montserrat - Bold";
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 61px;
+  /* Text style for "Experienci" */
+  font-family: Montserrat;
+  font-weight: 700;
+  margin-top: 56px;
+  margin-left: 28px;
+}
+
+.fecha{
+  /* Style for "1982 - 198" */
+  color: #ffffff;
+  width: 222px;
+  font-family: "Montserrat - Bold";
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.68px;
+  line-height: 24.16px;
+  text-align: center;
+  /* Text style for "1982 - 198" */
+  font-family: Montserrat;
+  font-weight: 700;
+}
+
+.fechaTexto{
+  /* Style for "Supervisor" */
+  width: 222px;
+  color: #ffffff;
+  font-family: "Montserrat - Regular";
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.88px;
+  line-height: 13.3px;
+  text-align: center;
+  /* Text style for "Supervisor" */
+  font-family: Montserrat;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.lineaAmarilla{
+  width: 102px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  margin-top: -9px;
+  background-color: #e3b419;
+}
+
+.hist1{
+  margin-top: 50px;
+  margin-left: 28px;
+  width: 222px;
+}
+.hist2{
+  margin-top: 50px;
+  margin-left: 28px;
+  width: 222px;
+  margin-left: 54px;
+}
+
+.lineaVertical{
+  position: absolute;
+  width: 1px;
+  background-color: #e3b419;
+  height: 239px;
+  margin-left: 43px;
+  margin-top: 30px;
+}
+
+.variosLayer2{
+  position: absolute;
+  width: 284px;
+  margin-top: 150px;
+  /* margin-right: -144px; */
+  right: -149px;
+}
+
+.subtituloHistoria{
+  /* Style for "Cargos Ocu" */
+  width: 393px;
+  color: #ffffff;
+  font-family: "Montserrat - Bold";
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 61px;
+  /* Text style for "Cargos Ocu" */
+  font-family: Montserrat;
+  font-weight: 700;
+  margin-left: 28px;
+  margin-top: 60px;
+  margin-bottom: -10px;
+}
+.subtextoHistoria{
+  /* Style for "Secretario" */
+  margin-left: 28px;
+  width: 90%;
+  color: #ffffff;
+  font-family: "Montserrat - Regular";
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+  line-height: 16.85px;
+  /* Text style for "Secretario" */
+  font-family: Montserrat;
+  font-weight: 400;
+}
+
+.botonCargos{
+  display: none !important;
+}
+
+.areasInteres{
+  background-image: url(./Assets/imagenAreas.png) ;
+  /* background-attachment: fixed; */
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding-top: 180px;
+}
+
+.tituloAreasInteres{
+  text-align: center;
+  /* Style for "Áreas de i" */
+color: #080744;
+font-family: "Montserrat - Bold";
+font-size: 43px;
+font-weight: 700;
+letter-spacing: 6.15px;
+line-height: 62.16px;
+/* Text style for "Áreas de i" */
+font-family: Montserrat;
+font-weight: 700;
+}
+
+.itemAreas{
+/* Style for "Seguridad" */
+color: #e3b419;
+font-family: "Montserrat - Bold";
+font-size: 29px;
+font-weight: 700;
+letter-spacing: 4.17px;
+line-height: 30.96px;
+/* Text style for "Seguridad" */
+font-family: Montserrat;
+font-weight: 700;
+margin-top: 21px;
+margin-right: 23px;
+}
+
+.listaAreas{
+  margin-left: -5% !important; 
+}
+.primerItemAreas{
+  text-align: end;
+}
+
+
+@media (max-width: 768px){
+  .navbar-expand-md .navbar-nav .nav-link {
+      padding-right: .5rem;
+      padding-left: .5rem;
+      margin-left: 1rem !important;
+  }
+  .imagenConoceme{   
+    margin-top: 50px !important;
+  }
+  .conocemeTxt{
+    margin-bottom: 50px !important;
+  }
+  .gradienteExp{
+    display: none;
+  }
+  .imagenExperiencia{
+    background-image: url(./Assets/imagenExperiencia.png) ;
+    /* background-attachment: fixed; */
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: 64%;
+  }
+  .variosLayer2{
+    display: none;
+  }
+  .lineaVertical{
+    display: none;
+  }
+  .hist1{
+    margin-top: 30px;
+    width: 222px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hist2{
+    margin-top: 30px;
+    width: 222px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .experienciaTitulo{
+    width: 100vw;
+    text-align: center;
+    margin-left: 0;
+  }
+  .modal-content {
+    width: 80% !important;
+    margin-left: 30px !important;
+  }
+  .botonCargos{
+    display: inline !important;
+    margin-top: 50px;
+    margin-left: 30%;
+  }
+  .subtituloHistoria{
+    display: none;
+  }
+  .subtextoHistoria{
+    display: none;
+  }
+  .areasInteres{
+    background-position: 26%;
+  }
+  .listaAreas{
+    margin-left: 0 !important; 
+  }
+  .itemAreas{
+    text-align: center !important;
+  }
+  .areasInteres{
+    padding-top: 80px;
+  }
 }
