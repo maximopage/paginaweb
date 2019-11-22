@@ -334,7 +334,7 @@ background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 96%
 }
 
 .principios{
-  height: 100vh;
+  height: 90vh;
 }
 
 .tituloPrincipios{
@@ -422,6 +422,57 @@ background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 96%
   height: 50vh;
   background-position: center center;
   background-size: cover;
+}
+
+.footer{
+  /* Style for "Rectángulo" */
+width: 100vw;
+height: 50vh;
+background-image:  url(./Assets/fondoFooter.png);
+background-position: center center;
+background-size: cover;
+}
+
+.uneteFooter{
+  height: 66px;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.logoFooter{
+  height: 47.5px;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.siguenos{
+  /* Style for "Síguenos" */
+color: #ffffff;
+font-size: 24px;
+font-weight: 300;
+line-height: 47.46px;
+/* Text style for "Síguenos" */
+font-family: Montserrat-light;
+font-weight: 300;
+display: block;
+    margin-top: -5.3%;
+    margin-left: 65%;
+}
+
+.instagram{
+  height: 42px;
+  margin-top: -8%;
+  margin-left: 78%;
+}
+.facebook{
+  height: 42px;
+  margin-top: -8%;
+  margin-left: 3%;
+}
+.twitter{
+  height: 42px;
+  margin-top: -8%;
+  margin-left: 3%;
 }
 
 @media (max-width: 768px){
@@ -518,5 +569,50 @@ background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 96%
   }
   .principios {
     height: auto;
-}
+  }
+  .footer{
+    background-position: 0% center;
+  }
+
+  .uneteFooter{
+    height: 66px;
+    margin-top: 20%;
+    margin-left: 15%;
+  }
+  
+  .logoFooter{
+    height: 47.5px;
+    margin-top: 20%;
+    margin-left: 15%;
+  }
+  
+  .siguenos{
+    /* Style for "Síguenos" */
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 47.46px;
+  /* Text style for "Síguenos" */
+  font-family: Montserrat-light;
+  font-weight: 300;
+  display: block;
+  margin-left: 36%;
+  margin-top: 10%;
+  }
+  
+  .instagram{
+    height: 42px;
+    margin-left: 22%;
+    margin-top: 5%;
+  }
+  .facebook{
+    height: 42px;
+    margin-left: 15%;
+    margin-top: 5%;
+  }
+  .twitter{
+    height: 42px;
+    margin-left: 15%;
+    margin-top: 5%;
+  }
 }

@@ -8,7 +8,12 @@ import imagenGrupo from './Assets/imagenGrupo.png';
 import principios1 from './Assets/principios1.svg';
 import principios2 from './Assets/principios2.svg';
 import principios3 from './Assets/principios3.svg';
-import principios4 from './Assets/principios4.svg';
+import principios4 from './Assets/principios4.svg'; 
+import uneteFooter from './Assets/uneteFooter.svg';
+import logoFooter from './Assets/logoFooter.svg';
+import instagram from './Assets/instagram.svg';
+import twitter from './Assets/twitter.svg';
+import facebook from './Assets/facebook.svg';
 import './App.css';
 import {
   Collapse,
@@ -58,13 +63,6 @@ function App(props) {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => setModal(!modal);
-  
-  useEffect(() =>{
-    console.log('mounted')
-         var positionAreas = document.getElementById("areasInteres").offsetTop;
-         var heightAreas =  document.getElementById("areasInteres").offsetHeight;
-         console.log(positionAreas,heightAreas)
-  } , []);
 
 
   return (
@@ -236,7 +234,14 @@ function App(props) {
       <div className="lineaAmarilla3"> </div>
       <div className="imagenGrupo" ></div>
       <div className="lineaAmarilla3"> </div>
-
+      <div className="footer">
+        <img className="uneteFooter" src={uneteFooter} alt="uneteFooter"></img>
+        <img className="logoFooter" src={logoFooter} alt="logoFooter"></img> 
+        <p className="siguenos">Síguenos</p>
+        <img className="instagram" src={instagram} alt="instagram"></img>
+        <img className="facebook" src={facebook} alt="facebook"></img>
+        <img className="twitter" src={twitter} alt="twitter"></img>
+      </div>
     </div>
   );
 }
