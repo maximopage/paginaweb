@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './Assets/logo.svg';
 import navUnete from './Assets/navUnete.svg';
 import variosLayer from './Assets/variosLayer.svg';
 import imagenPrincipal from './Assets/imagenPrincipal.png'; 
 import imagenConoceme from './Assets/imagenConoceme.png';
+import imagenGrupo from './Assets/imagenGrupo.png'; 
+import principios1 from './Assets/principios1.svg';
+import principios2 from './Assets/principios2.svg';
+import principios3 from './Assets/principios3.svg';
+import principios4 from './Assets/principios4.svg';
 import './App.css';
 import {
   Collapse,
@@ -53,6 +58,14 @@ function App(props) {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => setModal(!modal);
+  
+  useEffect(() =>{
+    console.log('mounted')
+         var positionAreas = document.getElementById("areasInteres").offsetTop;
+         var heightAreas =  document.getElementById("areasInteres").offsetHeight;
+         console.log(positionAreas,heightAreas)
+  } , []);
+
 
   return (
     <div className="App">
@@ -166,35 +179,63 @@ function App(props) {
         </div>
       </div>
 
-      <div className="areasInteres">
+      <div className="lineaAmarilla2"> </div>
+
+      <div id="areasInteres" className="areasInteres">
         <p  className="tituloAreasInteres">Áreas de interés</p>
         <Container className="listaAreas">
           <Row>
-            <Col  md="4"></Col>
+            <Col  md="3"></Col>
             <Col className="primerItemAreas" md="4">
               <p className="itemAreas">Seguridad</p>
             </Col>
-            <Col md="4">
+            <Col className="segundoItemAreas" md="4">
               <p className="itemAreas">Salud</p>
             </Col>
           </Row>
           <Row>
-          <Col  md="4"></Col>
+          <Col  md="3"></Col>
             <Col className="primerItemAreas" md="4">
               <p className="itemAreas">Orden</p>
             </Col>
-            <Col md="4">
+            <Col className="segundoItemAreas" md="4">
               <p className="itemAreas">Educación</p>
             </Col>
           </Row>
           <Row>
-          <Col  md="4"></Col>
+          <Col  md="3"></Col>
             <Col className="primerItemAreas" md="4">
               <p className="itemAreas">Responsabilidad social</p>
             </Col>
           </Row>
-        </Container>
+        </Container>        
       </div>
+
+      <div className="principios">
+        <p className="tituloPrincipios">Principios</p>
+        <Row className="rowPrincipios">
+          <Col className="principios1Col"  md="3"> 
+            <img className="principios1" src={principios1} alt="principios1"></img>
+            <p className="principiosSubtitle principiosSubtittle1">Solidaridad</p>
+          </Col>
+          <Col className="principios2Col" md="3"> 
+            <img className="principios2" src={principios2} alt="principios2"></img>
+            <p className="principiosSubtitle principiosSubtittle2">Igualdad</p>
+          </Col>
+          <Col className="principios3Col" md="3"> 
+            <img className="principios3" src={principios3} alt="principios3"></img>
+            <p className="principiosSubtitle principiosSubtittle3">Libertad</p>
+          </Col>
+          <Col className="principios4Col" md="3"> 
+            <img className="principios4" src={principios4} alt="principios4"></img>
+            <p className="principiosSubtitle principiosSubtittle4">Progreso</p>
+          </Col>
+        </Row>
+      </div>
+
+      <div className="lineaAmarilla3"> </div>
+      <div className="imagenGrupo" ></div>
+      <div className="lineaAmarilla3"> </div>
 
     </div>
   );
