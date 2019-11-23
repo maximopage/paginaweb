@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import logo from './Assets/logo.svg';
 import navUnete from './Assets/navUnete.svg';
 import variosLayer from './Assets/variosLayer.svg';
 import imagenPrincipal from './Assets/imagenPrincipal.png'; 
 import imagenConoceme from './Assets/imagenConoceme.png';
-import imagenGrupo from './Assets/imagenGrupo.png'; 
 import principios1 from './Assets/principios1.svg';
 import principios2 from './Assets/principios2.svg';
 import principios3 from './Assets/principios3.svg';
@@ -18,16 +17,11 @@ import './App.css';
 import {
   Collapse,
   Navbar,
-  NavbarText,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   Container,
   Row, 
   Col,
@@ -38,7 +32,7 @@ import {
   ModalFooter
 } from 'reactstrap';
 
-function App(props) {
+function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -55,14 +49,14 @@ function App(props) {
     }
   }
 
-  const {
-    buttonLabel,
-    className
-  } = props;
+
 
   const [modal, setModal] = useState(false);
 
-  const toggleModal = () => setModal(!modal);
+  const toggleModal = () => {
+    setModal(!modal);
+    console.log("hii")
+  } 
 
 
   return (
@@ -158,7 +152,7 @@ function App(props) {
           Justicia (Actualmente) | Secretario de Gobierno del Municipio Chacao (Actualmente)</p>
           <div>
           <Button className="botonCargos" color="warning" onClick={toggleModal}>Cargos Ocupados</Button>
-          <Modal isOpen={modal} toggle={toggleModal} className={className}>
+          <Modal isOpen={modal} toggle={toggleModal} >
             <ModalHeader toggle={toggleModal}>Cargos Ocupados</ModalHeader>
             <ModalBody>
             Secretario General del Cabildo Metropolitano de Caracas | Presidente de 
