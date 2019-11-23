@@ -475,6 +475,89 @@ display: block;
   margin-left: 3%;
 }
 
+.modalContent .modal-content{
+  background-image: radial-gradient(420px 420px at 0% 0%, #051739 0%, #030f2b 14%, #01061a 38%, #000111 64%, #00000e 98%);
+  
+}
+.modalUneteImg{
+  width: 75vw;
+}
+
+.inputModal{
+  border: 0px solid #ced4da !important;
+  background-color: transparent !important;
+  font-family: Montserrat-Bold !important;
+  color: white !important;
+}
+
+#nombre{
+  position: absolute;
+  left: 6%;
+  top: 41%;
+  font-size: 3.8vw;
+  width: 55vw;
+}
+
+#email{
+  position: absolute;
+  left: 6%;
+  top: 40%;
+  font-size: 2.5vw;
+  top: 58%;
+  width: 51vw;
+}
+
+.textUneteModal{
+  font-family: Montserrat-light;
+  color: white;
+  position: absolute;
+  top: 21%;
+  left: 8%;
+  font-size: 4vw;
+}
+
+.modalContent {
+  margin-left: 4% !important;
+  width: 80vw !important;
+  max-width: 100% !important;
+}
+.modalHeader{
+  border-bottom: 0px solid #dee2e6 !important;
+  padding-bottom : 0 !important;
+  padding-top: 5px !important;
+}
+
+.modalFooter{
+  border-top: 0px solid #dee2e6 !important;
+  display: none !important;
+
+}
+
+.modalHeader .close{
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #e3b419;
+  text-shadow: 0 1px 0 #e3b419;
+  opacity: .5;
+}
+.modalHeader .close:hover{
+  color: #e3b419;
+  text-decoration: none;
+}
+.modalBody {
+  width: 100vw;
+  height: 50vh;
+  background-image:  url(./Assets/modalUnete.svg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.modal-backdrop.show {
+  opacity: 0.9 !important;
+}
+
 @media (max-width: 768px){
   .navbar-expand-md .navbar-nav .nav-link {
       padding-right: .5rem;

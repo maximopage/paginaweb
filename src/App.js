@@ -13,6 +13,7 @@ import logoFooter from './Assets/logoFooter.svg';
 import instagram from './Assets/instagram.svg';
 import twitter from './Assets/twitter.svg';
 import facebook from './Assets/facebook.svg';
+import modalUneteImg from './Assets/modalUnete.svg';
 import './App.css';
 import {
   Collapse,
@@ -29,7 +30,8 @@ import {
   Modal, 
   ModalHeader, 
   ModalBody, 
-  ModalFooter
+  ModalFooter,
+  Input
 } from 'reactstrap';
 
 function App() {
@@ -57,6 +59,15 @@ function App() {
     setModal(!modal);
     console.log("hii")
   } 
+
+  
+  const [modalUnete, setModalUnete] = useState(false);
+
+  const toggleModalUnete = () => {
+    setModalUnete(!modalUnete);
+    console.log("hii")
+  } 
+
 
 
   return (
@@ -236,6 +247,26 @@ function App() {
         <img className="facebook" src={facebook} alt="facebook"></img>
         <img className="twitter" src={twitter} alt="twitter"></img>
       </div>
+
+
+
+    {/* pruebas */}
+
+    <Button color="warning" onClick={toggleModalUnete}>Cargos Ocupados</Button>
+          <Modal className="modalContent" isOpen={modalUnete} toggle={toggleModalUnete} >
+            <ModalHeader className="modalHeader" toggle={toggleModalUnete}></ModalHeader>
+            <ModalBody>
+              {/* <div className="modalBody"> </div> */}
+              <img className="modalUneteImg" src={modalUneteImg} alt="modalUneteImg"></img>
+              <Input className="inputModal" type="text" name="nombre" id="nombre" placeholder="Tu nombre y apellido aquí" />
+              <Input className="inputModal" type="email" name="email" id="email" placeholder="Tu correo aquí" />
+              <p className="textUneteModal">Únete</p>
+            </ModalBody>
+            <ModalFooter className="modalFooter" >
+              <Button color="secondary" onClick={toggleModalUnete}>Cerrar</Button>
+            </ModalFooter>
+          </Modal>
+
     </div>
   );
 }
