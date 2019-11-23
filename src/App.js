@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import logo from './Assets/logo.svg';
 import navUnete from './Assets/navUnete.svg';
 import variosLayer from './Assets/variosLayer.svg';
@@ -14,7 +14,9 @@ import instagram from './Assets/instagram.svg';
 import twitter from './Assets/twitter.svg';
 import facebook from './Assets/facebook.svg';
 import modalUneteImg from './Assets/modalUnete.svg';
+import modalUneteEnviar from './Assets/modalUneteEnviar.svg';
 import './App.css';
+import Recaptcha from 'react-recaptcha';
 import {
   Collapse,
   Navbar,
@@ -51,13 +53,66 @@ function App() {
     }
   }
 
+  const changeUnete = () => {
+    var name = document.getElementById('nombre')
+    var email = document.getElementById('email')
+    var modalUneteImg = document.getElementById('modalUneteImg')
+    var enviarModal = document.getElementById('enviarModal')
+    if(name.value!="" && email.value!=""){
+      modalUneteImg.src=modalUneteEnviar;
+      enviarModal.style.display="block";
+      ValidateEmail(email.value)
+    }
+  }
+
+  const enviarModal = () => {
+    var name = document.getElementById('nombre')
+    var email = document.getElementById('email')
+    
+    if(ValidateEmail(email.value)){
+      if(name.value.includes(' ') && name.value.split(" ").length>1 ){
+        if(name.value.split(" ")[0]!=="" && name.value.split(" ")[1]!==""){
+          sendFeedback()
+        }
+        else{
+          alert("Por favor ingrese nombre y apellido")
+        }
+      }else{
+        alert("Por favor ingrese nombre y apellido")
+      }
+    }else{
+      alert("El correo suministrado no es valido")
+    }
+  }
+
+  const sendFeedback = (templateId, variables) => {
+    window.emailjs.send(
+      'gmail', 'template_32xNxITu',
+      {message_html: "<h1> Maximo!! una persona se quiere unir</h1> <p>Nombre: "+document.getElementById('nombre').value+"</p> <p>Email: " +document.getElementById('email').value+"</p>"}
+      ).then(res => {
+        console.log('Email successfully sent!')
+      })
+      // Handle errors here however you like, or use a React error boundary
+      .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+    }
+
+  const ValidateEmail = (email) => {
+    console.log(email)
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+      {
+        return (true)
+        
+      }
+        return (false)
+  }
+
 
 
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
+    console.log(Recaptcha)
     setModal(!modal);
-    console.log("hii")
   } 
 
   
@@ -65,9 +120,7 @@ function App() {
 
   const toggleModalUnete = () => {
     setModalUnete(!modalUnete);
-    console.log("hii")
-  } 
-
+  }   
 
 
   return (
@@ -79,19 +132,19 @@ function App() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem className='marginNav'>
-              <NavLink  href="#">Conóceme</NavLink>
+              <NavLink  href="#conoceme">Conóceme</NavLink>
             </NavItem>
             <NavItem className='marginNav'>
-              <NavLink  href="#">Experiencia</NavLink>
+              <NavLink  href="#experiencia">Experiencia</NavLink>
             </NavItem>
             <NavItem className='marginNav'>
-              <NavLink  href="#">Áreas de interés</NavLink>
+              <NavLink  href="#areasInteres">Áreas de interés</NavLink>
             </NavItem>
             <NavItem className='marginNav'>
-              <NavLink  href="#">Principios</NavLink>
+              <NavLink  href="#principios">Principios</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink  href="#"> <img className="navUnete" src={navUnete} alt="navUnete"></img></NavLink>
+              <NavLink onClick={toggleModalUnete} href="#"> <img className="navUnete" src={navUnete} alt="navUnete"></img></NavLink>
             </NavItem>
           </Nav> 
         </Collapse>
@@ -100,7 +153,7 @@ function App() {
         <img className="imagenPrincipal" src={imagenPrincipal} alt="imagenPrincipal"></img>
       </div>
 
-      <div className="conoceme">
+      <div id="conoceme" className="conoceme">
         <img className="imagenConoceme" src={imagenConoceme} alt="imagenConoceme"></img>
         <p className="conocemeTitulo">Conóceme</p>
         <p className="conocemeTxt">
@@ -110,7 +163,7 @@ function App() {
         </p>
       </div>
 
-      <div className="experiencia">
+      <div id="experiencia" className="experiencia">
         <div className="gradienteExp">
           <img className="variosLayer" src={variosLayer} alt="variosLayer"></img>
         </div>
@@ -214,7 +267,7 @@ function App() {
         </Container>        
       </div>
 
-      <div className="principios">
+      <div id="principios" className="principios">
         <p className="tituloPrincipios">Principios</p>
         <Row className="rowPrincipios">
           <Col className="principios1Col"  md="3"> 
@@ -240,7 +293,7 @@ function App() {
       <div className="imagenGrupo" ></div>
       <div className="lineaAmarilla3"> </div>
       <div className="footer">
-        <img className="uneteFooter" src={uneteFooter} alt="uneteFooter"></img>
+        <img className="uneteFooter" onClick={toggleModalUnete} src={uneteFooter} alt="uneteFooter"></img>
         <img className="logoFooter" src={logoFooter} alt="logoFooter"></img> 
         <p className="siguenos">Síguenos</p>
         <img className="instagram" src={instagram} alt="instagram"></img>
@@ -252,15 +305,16 @@ function App() {
 
     {/* pruebas */}
 
-    <Button color="warning" onClick={toggleModalUnete}>Cargos Ocupados</Button>
+    {/* <Button color="warning" onClick={toggleModalUnete}>Cargos Ocupados</Button> */}
           <Modal className="modalContent" isOpen={modalUnete} toggle={toggleModalUnete} >
             <ModalHeader className="modalHeader" toggle={toggleModalUnete}></ModalHeader>
             <ModalBody>
               {/* <div className="modalBody"> </div> */}
-              <img className="modalUneteImg" src={modalUneteImg} alt="modalUneteImg"></img>
-              <Input className="inputModal" type="text" name="nombre" id="nombre" placeholder="Tu nombre y apellido aquí" />
-              <Input className="inputModal" type="email" name="email" id="email" placeholder="Tu correo aquí" />
+              <img className="modalUneteImg" id="modalUneteImg" src={modalUneteImg} alt="modalUneteImg"></img>
+              <Input onChange={changeUnete} className="inputModal" type="text" name="nombre" id="nombre" placeholder="Tu nombre y apellido aquí" />
+              <Input onChange={changeUnete} className="inputModal" type="email" name="email" id="email" placeholder="Tu correo aquí" />
               <p className="textUneteModal">Únete</p>
+              <p id="enviarModal" onClick={enviarModal} className="enviarModal">Enviar</p>
             </ModalBody>
             <ModalFooter className="modalFooter" >
               <Button color="secondary" onClick={toggleModalUnete}>Cerrar</Button>

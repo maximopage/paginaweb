@@ -63,7 +63,7 @@
   display: inline  !important;
   color: #ffffff  !important;
   font-family: Montserrat-medium !important;
-  font-size: 18px  !important;
+  font-size: initial  !important;
   font-weight: 500 !important;
   letter-spacing: 2.24px  !important;
   line-height: 30.38px  !important;
@@ -132,6 +132,7 @@ margin-right: auto;
 .gradienteExp{
   width: 20%;
   height: 100vh;
+  z-index: -1;
   background-image: linear-gradient(to right, #00000e 2%, #000111 36%, #01061a 62%, #030f2b 86%, #051739 100%);
 }
 
@@ -334,7 +335,7 @@ background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 96%
 }
 
 .principios{
-  height: 90vh;
+  height: 100vh;
 }
 
 .tituloPrincipios{
@@ -437,8 +438,12 @@ background-size: cover;
   height: 66px;
   margin-top: 10%;
   margin-left: 5%;
+
 }
 
+.uneteFooter:hover{
+  cursor: pointer;
+}
 .logoFooter{
   height: 47.5px;
   margin-top: 10%;
@@ -475,9 +480,17 @@ display: block;
   margin-left: 3%;
 }
 
+.instagram:hover{
+  cursor: pointer;
+}
+.facebook:hover{
+  cursor: pointer;
+}
+.twitter:hover{
+  cursor: pointer;
+}
 .modalContent .modal-content{
   background-image: radial-gradient(420px 420px at 0% 0%, #051739 0%, #030f2b 14%, #01061a 38%, #000111 64%, #00000e 98%);
-  
 }
 .modalUneteImg{
   width: 75vw;
@@ -557,6 +570,24 @@ display: block;
 .modal-backdrop.show {
   opacity: 0.9 !important;
 }
+
+.enviarModal{
+  left: 80%;
+  font-family: Montserrat-Bold !important;
+  position: absolute;
+  top: 45%;
+  font-size: 3vw;
+  color: white;
+  display: none;
+}
+
+.enviarModal:hover {
+  font-size: 4vw;
+  top: 43%;
+  left: 77%;
+  cursor: pointer;
+}
+
 
 @media (max-width: 768px){
   .navbar-expand-md .navbar-nav .nav-link {
@@ -702,4 +733,12 @@ display: block;
   .experiencia{
     display:block;
   }
+  .modalContent .modal-content{
+    width: 106% !important;
+    margin-left: 4%!important;
+    margin-top: 45%;
+  }
+  #nombre {
+    width: 60vw;
+}
 }
