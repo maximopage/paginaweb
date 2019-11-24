@@ -345,7 +345,7 @@ function App() {
       <div className="footer">
         <img id="uneteFooter" className="uneteFooter" onMouseOut={changeUneteFooter0} onMouseOver={changeUneteFooter1} onClick={toggleModalUnete} src={uneteFooter} alt="uneteFooter"></img>
         <img className="logoFooter" src={logoFooter} alt="logoFooter"></img> 
-        <p className="siguenos">Síguenos</p>
+        <p className="siguenos animated infinite pulse delay-2s ">Síguenos</p>
         <img className="instagram" id="instagram" onMouseOut={changeI0} onMouseOver={changeI1} src={instagram} alt="instagram"></img>
         <img className="facebook"  id="facebook" onMouseOut={changeF0} onMouseOver={changeF1} src={facebook} alt="facebook"></img>
         <img className="twitter"  id="twitter" onMouseOut={changeT0} onMouseOver={changeT1} src={twitter} alt="twitter"></img>
@@ -353,7 +353,7 @@ function App() {
 
 
 
-    {/* pruebas */}
+    {/* modal unete */}
 
     {/* <Button color="warning" onClick={toggleModalUnete}>Cargos Ocupados</Button> */}
           <Modal className="modalContent" isOpen={modalUnete} toggle={toggleModalUnete} >

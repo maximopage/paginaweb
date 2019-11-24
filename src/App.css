@@ -422,6 +422,7 @@ background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 96%
 
 .rowPrincipios{
   margin-top: 8%;
+  margin-right: 0px !important;
 }
 .principiosSubtitle{
   /* Style for "Solidarida" */
@@ -709,22 +710,34 @@ display: block;
     margin-left: 0%;
   }
   .principios1Col{
-    margin-left: 29%;
+    margin-left: 28%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
   }
   .principios2Col{
     margin-left: 32%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
   }
   .principios3Col{
     margin-left: 33%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
   }
   .principios4Col{
     margin-left: 31%;
+    padding-right: 0px !important;
+     padding-left: 0px !important;
   }
   .principios {
     height: auto;
   }
   .footer{
     background-position: 0% center;
+  }
+
+  .rowPrincipios{
+    margin-left: 4px !important;
   }
 
   .uneteFooter{
@@ -749,8 +762,9 @@ display: block;
   font-family: Montserrat-light;
   font-weight: 300;
   display: block;
-  margin-left: 36%;
+  margin-left: 34%;
   margin-top: 10%;
+  width: 50%;
   }
   
   .instagram{
@@ -778,5 +792,6 @@ display: block;
   }
   #nombre {
     width: 60vw;
-}
+  }
+
 }
