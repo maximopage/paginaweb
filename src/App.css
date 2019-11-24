@@ -41,6 +41,7 @@
 .rectangulo{
   display: flex;
   width: 100%;
+  z-index: 100;
   height: 136px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.75);
   background-image: radial-gradient(840px 840px at 0% 0%, #051739 0%, #020e29 17%, #000518 42%, #000212 60%, #000111 64%, #00000e 98%);  
@@ -70,6 +71,9 @@
   margin-left: 2rem !important;
 }
 
+a.nav-link:hover {
+  color: #e3b419 !important;
+}
 .navbar-light .navbar-toggler {
   border-color: #e3b419 !important;
 }
@@ -83,10 +87,44 @@
 
 .imagenPrincipal{
   width: 100%;
+  animation-name: scales;
+  animation-duration: 23s;
+  animation-iteration-count: infinite;
+  transform-origin: center center;
+  z-index: -1;
 }
 
+.owl-item.active {
+  transform-origin: center center;
+}
+
+@keyframes scales{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.035);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
 .fondoAmarillo{
   background-color: #e3b419;
+  display: inline-block !important;
+  overflow: hidden !important;
+}
+
+@keyframes scales2{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.035);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 
 
@@ -691,13 +729,13 @@ display: block;
 
   .uneteFooter{
     height: 66px;
-    margin-top: 20%;
+    margin-top: 5%;
     margin-left: 15%;
   }
   
   .logoFooter{
     height: 47.5px;
-    margin-top: 20%;
+    margin-top: 5%;
     margin-left: 15%;
   }
   

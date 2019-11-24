@@ -13,8 +13,12 @@ import logoFooter from './Assets/logoFooter.svg';
 import instagram from './Assets/instagram.svg';
 import twitter from './Assets/twitter.svg';
 import facebook from './Assets/facebook.svg';
+import instagramAmarillo from './Assets/instagramAmarillo.svg';
+import twitterAmarillo from './Assets/twitterAmarillo.svg';
+import facebookAmarillo from './Assets/facebookAmarillo.svg';
 import modalUneteImg from './Assets/modalUnete.svg';
 import modalUneteEnviar from './Assets/modalUneteEnviar.svg';
+import ScrollAnimation from 'react-animate-on-scroll';
 import './App.css';
 import Recaptcha from 'react-recaptcha';
 import {
@@ -95,6 +99,38 @@ function App() {
       // Handle errors here however you like, or use a React error boundary
       .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
     }
+    
+    const changeI0 = () => {
+      document.getElementById("instagram").src = instagram;
+    }
+    const changeI1 = () => {
+      document.getElementById("instagram").src = instagramAmarillo;
+    }
+    const changeT0 = () => {
+      document.getElementById("twitter").src = twitter;
+    }
+    const changeT1 = () => {
+      document.getElementById("twitter").src = twitterAmarillo;
+    }
+    const changeF0 = () => {
+      document.getElementById("facebook").src = facebook;
+    }
+    const changeF1 = () => {
+      document.getElementById("facebook").src = facebookAmarillo;
+    }
+
+  const changeUneteHeader1 = () => {
+    document.getElementById("navUnete").src = uneteFooter;
+  }
+  const changeUneteHeader0 = () => {
+    document.getElementById("navUnete").src = navUnete;
+  }
+  const changeUneteFooter1 = () => {
+      document.getElementById("uneteFooter").src = navUnete;
+  }
+  const changeUneteFooter0 = () => {
+    document.getElementById("uneteFooter").src = uneteFooter;
+}
 
   const ValidateEmail = (email) => {
     console.log(email)
@@ -144,7 +180,7 @@ function App() {
               <NavLink  href="#principios">Principios</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink onClick={toggleModalUnete} href="#"> <img className="navUnete" src={navUnete} alt="navUnete"></img></NavLink>
+              <NavLink onMouseOut={changeUneteHeader0} onMouseOver={changeUneteHeader1} onClick={toggleModalUnete} href="#"> <img id="navUnete" className="navUnete" src={navUnete} alt="navUnete"></img></NavLink>
             </NavItem>
           </Nav> 
         </Collapse>
@@ -152,6 +188,7 @@ function App() {
       <div className="fondoAmarillo">
         <img className="imagenPrincipal" src={imagenPrincipal} alt="imagenPrincipal"></img>
       </div>
+      <ScrollAnimation delay={500} animateIn='fadeIn'>
 
       <div id="conoceme" className="conoceme">
         <img className="imagenConoceme" src={imagenConoceme} alt="imagenConoceme"></img>
@@ -162,15 +199,21 @@ function App() {
           cargos políticos y administrativos para varios entes públicos.
         </p>
       </div>
+ 
+</ScrollAnimation>
 
       <div id="experiencia" className="experiencia">
         <div className="gradienteExp">
-          <img className="variosLayer" src={variosLayer} alt="variosLayer"></img>
+          <ScrollAnimation delay={200} animateIn='bounceInLeft'>
+            <img className="variosLayer" src={variosLayer} alt="variosLayer"></img>
+          </ScrollAnimation>         
         </div>
         <div className="imagenExperiencia"> 
           <p className="experienciaTitulo">Experiencia </p>
           <Container className="historia">
-          <img className="variosLayer2" src={variosLayer} alt="variosLayer"></img>
+            <ScrollAnimation delay={200} animateIn='bounceInLeft'>          
+              <img className="variosLayer2" src={variosLayer} alt="variosLayer"></img>
+            </ScrollAnimation> 
             <Row>
               <Col md="3">
                 <div className="hist1">
@@ -238,67 +281,74 @@ function App() {
       <div className="lineaAmarilla2"> </div>
 
       <div id="areasInteres" className="areasInteres">
-        <p  className="tituloAreasInteres">Áreas de interés</p>
-        <Container className="listaAreas">
-          <Row>
+        <ScrollAnimation delay={200} animateIn='zoomInDown'>  
+          <p  className="tituloAreasInteres">Áreas de interés</p>
+        </ScrollAnimation> 
+        <ScrollAnimation delay={200} animateIn='zoomIn'>  
+
+          <Container className="listaAreas">
+            <Row>
+              <Col  md="3"></Col>
+              <Col className="primerItemAreas" md="4">
+                <p className="itemAreas">Seguridad</p>
+              </Col>
+              <Col className="segundoItemAreas" md="4">
+                <p className="itemAreas">Salud</p>
+              </Col>
+            </Row>
+            <Row>
             <Col  md="3"></Col>
-            <Col className="primerItemAreas" md="4">
-              <p className="itemAreas">Seguridad</p>
-            </Col>
-            <Col className="segundoItemAreas" md="4">
-              <p className="itemAreas">Salud</p>
-            </Col>
-          </Row>
-          <Row>
-          <Col  md="3"></Col>
-            <Col className="primerItemAreas" md="4">
-              <p className="itemAreas">Orden</p>
-            </Col>
-            <Col className="segundoItemAreas" md="4">
-              <p className="itemAreas">Educación</p>
-            </Col>
-          </Row>
-          <Row>
-          <Col  md="3"></Col>
-            <Col className="primerItemAreas" md="4">
-              <p className="itemAreas">Responsabilidad social</p>
-            </Col>
-          </Row>
-        </Container>        
+              <Col className="primerItemAreas" md="4">
+                <p className="itemAreas">Orden</p>
+              </Col>
+              <Col className="segundoItemAreas" md="4">
+                <p className="itemAreas">Educación</p>
+              </Col>
+            </Row>
+            <Row>
+            <Col  md="3"></Col>
+              <Col className="primerItemAreas" md="4">
+                <p className="itemAreas">Responsabilidad social</p>
+              </Col>
+            </Row>
+          </Container>                
+        </ScrollAnimation> git
       </div>
 
-      <div id="principios" className="principios">
-        <p className="tituloPrincipios">Principios</p>
-        <Row className="rowPrincipios">
-          <Col className="principios1Col"  md="3"> 
-            <img className="principios1" src={principios1} alt="principios1"></img>
-            <p className="principiosSubtitle principiosSubtittle1">Solidaridad</p>
-          </Col>
-          <Col className="principios2Col" md="3"> 
-            <img className="principios2" src={principios2} alt="principios2"></img>
-            <p className="principiosSubtitle principiosSubtittle2">Igualdad</p>
-          </Col>
-          <Col className="principios3Col" md="3"> 
-            <img className="principios3" src={principios3} alt="principios3"></img>
-            <p className="principiosSubtitle principiosSubtittle3">Libertad</p>
-          </Col>
-          <Col className="principios4Col" md="3"> 
-            <img className="principios4" src={principios4} alt="principios4"></img>
-            <p className="principiosSubtitle principiosSubtittle4">Progreso</p>
-          </Col>
-        </Row>
-      </div>
+      <ScrollAnimation delay={100} animateIn='rollIn'>          
+        <div id="principios" className="principios">
+          <p className="tituloPrincipios">Principios</p>
+          <Row className="rowPrincipios">
+            <Col className="principios1Col"  md="3"> 
+              <img className="principios1" src={principios1} alt="principios1"></img>
+              <p className="principiosSubtitle principiosSubtittle1">Solidaridad</p>
+            </Col>
+            <Col className="principios2Col" md="3"> 
+              <img className="principios2" src={principios2} alt="principios2"></img>
+              <p className="principiosSubtitle principiosSubtittle2">Igualdad</p>
+            </Col>
+            <Col className="principios3Col" md="3"> 
+              <img className="principios3" src={principios3} alt="principios3"></img>
+              <p className="principiosSubtitle principiosSubtittle3">Libertad</p>
+            </Col>
+            <Col className="principios4Col" md="3"> 
+              <img className="principios4" src={principios4} alt="principios4"></img>
+              <p className="principiosSubtitle principiosSubtittle4">Progreso</p>
+            </Col>
+          </Row>
+        </div>
+      </ScrollAnimation>
 
       <div className="lineaAmarilla3"> </div>
       <div className="imagenGrupo" ></div>
       <div className="lineaAmarilla3"> </div>
       <div className="footer">
-        <img className="uneteFooter" onClick={toggleModalUnete} src={uneteFooter} alt="uneteFooter"></img>
+        <img id="uneteFooter" className="uneteFooter" onMouseOut={changeUneteFooter0} onMouseOver={changeUneteFooter1} onClick={toggleModalUnete} src={uneteFooter} alt="uneteFooter"></img>
         <img className="logoFooter" src={logoFooter} alt="logoFooter"></img> 
         <p className="siguenos">Síguenos</p>
-        <img className="instagram" src={instagram} alt="instagram"></img>
-        <img className="facebook" src={facebook} alt="facebook"></img>
-        <img className="twitter" src={twitter} alt="twitter"></img>
+        <img className="instagram" id="instagram" onMouseOut={changeI0} onMouseOver={changeI1} src={instagram} alt="instagram"></img>
+        <img className="facebook"  id="facebook" onMouseOut={changeF0} onMouseOver={changeF1} src={facebook} alt="facebook"></img>
+        <img className="twitter"  id="twitter" onMouseOut={changeT0} onMouseOver={changeT1} src={twitter} alt="twitter"></img>
       </div>
 
 
