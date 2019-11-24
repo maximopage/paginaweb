@@ -312,7 +312,7 @@ function App() {
               </Col>
             </Row>
           </Container>                
-        </ScrollAnimation> git
+        </ScrollAnimation>
       </div>
 
       <ScrollAnimation delay={100} animateIn='rollIn'>          
