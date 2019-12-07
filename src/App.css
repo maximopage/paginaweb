@@ -75,7 +75,7 @@ a.nav-link:hover {
   color: #e3b419 !important;
 }
 .navbar-light .navbar-toggler {
-  border-color: #e3b419 !important;
+  border-color: none !important;
 }
 .navUnete{
   height: 46px;
@@ -91,7 +91,7 @@ a.nav-link:hover {
   animation-duration: 23s;
   animation-iteration-count: infinite;
   transform-origin: center center;
-  z-index: -1;
+  z-index: 1;
 }
 
 .owl-item.active {
@@ -500,23 +500,26 @@ font-family: Montserrat-light;
 font-weight: 300;
 display: block;
     margin-top: -5.3%;
-    margin-left: 65%;
+    margin-left: 60%;
 }
 
 .instagram{
   height: 42px;
-  margin-top: -8%;
-  margin-left: 78%;
+  margin-top: -4.4%;
+  margin-left: 73%;
+  position: absolute;
 }
 .facebook{
   height: 42px;
-  margin-top: -8%;
-  margin-left: 3%;
+  margin-top: -4.4%;
+  margin-left: 80%;
+  position: absolute;
 }
 .twitter{
   height: 42px;
-  margin-top: -8%;
-  margin-left: 3%;
+  margin-top: -4.4%;
+  margin-left: 85%;
+  position: absolute;
 }
 
 .instagram:hover{
@@ -585,14 +588,19 @@ display: block;
 
 }
 
-.modalHeader .close{
-  float: right;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1;
-  color: #e3b419;
-  text-shadow: 0 1px 0 #e3b419;
-  opacity: .5;
+.close{
+  float: right !important;
+  font-size: 2.5rem !important;
+  font-weight: 200 !important;
+  line-height: 1 !important;
+  color: #ffc107 !important;
+  margin-top: -25px !important;
+  text-shadow: -1px 0px 0 #ffc107 !important ;
+  opacity: 1 !important;
+}
+
+.itemModal{
+  text-align: center;
 }
 .modalHeader .close:hover{
   color: #e3b419;
@@ -627,8 +635,57 @@ display: block;
   cursor: pointer;
 }
 
+.uneteMobile{
+  display: none;
+  font-family: Montserrat-Bold !important;
+}
+
+.uneteMobile:hover{
+  cursor: pointer;
+}
+
+.variosLayerMobile{
+  display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE */
+
 
 @media (max-width: 768px){
+
+
+  
+  .uneteMobile{
+    display: inline;
+    margin-top: 19px;
+    margin-right: 18px;
+    font-size: 19px;
+    color: white;
+  }
+
+  .variosLayerMobile{
+    display: block;
+    width: 48%;
+    position: absolute;
+    margin-left: -27%;
+    margin-top: -25px;
+  }
+  .navUnete{
+    display:none;
+  }
+  .logo{
+    height: 7vh;
+  }
   .navbar-expand-md .navbar-nav .nav-link {
       padding-right: .5rem;
       padding-left: .5rem;
@@ -676,10 +733,23 @@ display: block;
     width: 100vw;
     text-align: center;
     margin-left: 0;
+    margin-top: 0px;
   }
   .modal-content {
     width: 80% !important;
     margin-left: 30px !important;
+    background-color: rgba(00,40,85,0.9) !important;
+    color:white;
+  }
+  .modal-header{
+    border-bottom: 0px !important;
+  }
+  .modal-footer{
+    border-top: 0px !important;
+  }
+  .cerrarBtn{
+    margin-right: 37%;
+    margin-top: -19px;
   }
   .botonCargos{
     display: inline !important;
@@ -762,7 +832,7 @@ display: block;
   font-family: Montserrat-light;
   font-weight: 300;
   display: block;
-  margin-left: 34%;
+  margin-left: 37%;
   margin-top: 10%;
   width: 50%;
   }
@@ -771,16 +841,19 @@ display: block;
     height: 42px;
     margin-left: 22%;
     margin-top: 5%;
+    position: relative;
   }
   .facebook{
     height: 42px;
     margin-left: 15%;
     margin-top: 5%;
+    position: relative;
   }
   .twitter{
     height: 42px;
     margin-left: 15%;
     margin-top: 5%;
+    position: relative;
   }
   .experiencia{
     display:block;

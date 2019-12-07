@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState} from 'react';
 import logo from './Assets/logo.svg';
 import navUnete from './Assets/navUnete.svg';
 import variosLayer from './Assets/variosLayer.svg';
@@ -62,11 +62,21 @@ function App() {
     var email = document.getElementById('email')
     var modalUneteImg = document.getElementById('modalUneteImg')
     var enviarModal = document.getElementById('enviarModal')
-    if(name.value!="" && email.value!=""){
+    if(name.value!=="" && email.value!==""){
       modalUneteImg.src=modalUneteEnviar;
       enviarModal.style.display="block";
       ValidateEmail(email.value)
     }
+  }
+
+  const openInstagram = () => {
+    window.open("https://www.instagram.com/maximo_sanchez/?hl=es-la");
+  }
+  const openFacebook = () => {
+    window.open("https://es-la.facebook.com/pages/category/Government-Official/M%C3%A1ximo-S%C3%A1nchez-Brandt-261394580638130/");
+  }
+  const openTwitter = () => {
+    window.open("https://twitter.com/maximo_sanchez?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor");
   }
 
   const enviarModal = () => {
@@ -134,7 +144,7 @@ function App() {
 
   const ValidateEmail = (email) => {
     console.log(email)
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+    if (/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(email))
       {
         return (true)
         
@@ -165,6 +175,7 @@ function App() {
       <Navbar className="rectangulo" color="light" light expand="md">
         <NavbarBrand href="/"> <img className="logo" src={logo} alt="logo"></img></NavbarBrand>
         <NavbarToggler onClick={toggle} />
+        <p  onClick={toggleModalUnete} className="uneteMobile">ÚNETE</p>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem className='marginNav'>
@@ -188,7 +199,7 @@ function App() {
       <div className="fondoAmarillo">
         <img className="imagenPrincipal" src={imagenPrincipal} alt="imagenPrincipal"></img>
       </div>
-      <ScrollAnimation delay={500} animateIn='fadeIn'>
+      <ScrollAnimation delay={500}  animateOnce={true} animateIn='fadeIn'>
 
       <div id="conoceme" className="conoceme">
         <img className="imagenConoceme" src={imagenConoceme} alt="imagenConoceme"></img>
@@ -203,15 +214,16 @@ function App() {
 </ScrollAnimation>
 
       <div id="experiencia" className="experiencia">
+      <img className="variosLayerMobile" src={variosLayer} alt="variosLayer"></img>
         <div className="gradienteExp">
-          <ScrollAnimation delay={200} animateIn='bounceInLeft'>
+          <ScrollAnimation delay={200} animateOnce={true} animateIn='bounceInLeft'>
             <img className="variosLayer" src={variosLayer} alt="variosLayer"></img>
           </ScrollAnimation>         
         </div>
         <div className="imagenExperiencia"> 
           <p className="experienciaTitulo">Experiencia </p>
           <Container className="historia">
-            <ScrollAnimation delay={200} animateIn='bounceInLeft'>          
+            <ScrollAnimation delay={200} animateOnce={true} animateIn='bounceInLeft'>          
               <img className="variosLayer2" src={variosLayer} alt="variosLayer"></img>
             </ScrollAnimation> 
             <Row>
@@ -262,16 +274,19 @@ function App() {
           <Modal isOpen={modal} toggle={toggleModal} >
             <ModalHeader toggle={toggleModal}>Cargos Ocupados</ModalHeader>
             <ModalBody>
-            Secretario General del Cabildo Metropolitano de Caracas | Presidente de 
-              la Comisión de Legislación del Cabildo Metropolitano de Caracas | Jefe de la Fracción Parlamentaria 
-              del Movimiento Primero Justicia Secretario Nacional de Organización del Movimiento Primero Justicia 
-              (2007-2008). | Miembro Directivo de la Fundación Justicia y Democracia. (2008-2009) | Jefe de Campaña 
-              del Alcalde Ramón Muchacho (2013). Jefe de Campaña del Alcalde Gustavo Duque (2017) | Presidente del
-              Colegio de Politólogos de Venezuela (Actualmente) | Miembro de la Dirección Nacional del Movimiento Primero 
-              Justicia (Actualmente) | Secretario de Gobierno del Municipio Chacao (Actualmente)
+            <p className="itemModal">Secretario General del Cabildo Metropolitano de Caracas.</p>
+            <p className="itemModal">Presidente de la Comisión de Legislación del Cabildo Metropolitano de Caracas.</p> 
+            <p className="itemModal">Jefe de la Fracción Parlamentaria del Movimiento Primero Justicia.</p> 
+            <p className="itemModal">Secretario Nacional de Organización del Movimiento Primero Justicia (2007-2008).</p> 
+            <p className="itemModal"> Miembro Directivo de la Fundación Justicia y Democracia (2008-2009).</p> 
+            <p className="itemModal"> Jefe de Campaña del Alcalde Ramón Muchacho (2013). </p> 
+            <p className="itemModal"> Jefe de Campaña del Alcalde Gustavo Duque (2017). </p> 
+            <p className="itemModal"> Presidente del Colegio de Politólogos de Venezuela (Actualmente). </p> 
+            <p className="itemModal"> Miembro de la Dirección Nacional del Movimiento Primero Justicia (Actualmente).</p> 
+            <p className="itemModal"> Secretario de Gobierno del Municipio Chacao (Actualmente).</p> 
             </ModalBody>
             <ModalFooter>
-              <Button color="secondary" onClick={toggleModal}>Cerrar</Button>
+              <Button className="cerrarBtn" color="warning" onClick={toggleModal}>Cerrar</Button>
             </ModalFooter>
           </Modal>
           </div>
@@ -281,10 +296,10 @@ function App() {
       <div className="lineaAmarilla2"> </div>
 
       <div id="areasInteres" className="areasInteres">
-        <ScrollAnimation delay={200} animateIn='zoomInDown'>  
+        <ScrollAnimation delay={200} animateOnce={true} animateIn='fadeIn'>  
           <p  className="tituloAreasInteres">Áreas de interés</p>
         </ScrollAnimation> 
-        <ScrollAnimation delay={200} animateIn='zoomIn'>  
+        <ScrollAnimation delay={200} animateOnce={true} animateIn='fadeIn'>  
 
           <Container className="listaAreas">
             <Row>
@@ -315,7 +330,7 @@ function App() {
         </ScrollAnimation>
       </div>
 
-      <ScrollAnimation delay={100} animateIn='rollIn'>          
+      <ScrollAnimation delay={100} animateOnce={true} animateIn='fadeIn'>          
         <div id="principios" className="principios">
           <p className="tituloPrincipios">Principios</p>
           <Row className="rowPrincipios">
@@ -342,14 +357,17 @@ function App() {
       <div className="lineaAmarilla3"> </div>
       <div className="imagenGrupo" ></div>
       <div className="lineaAmarilla3"> </div>
+      
       <div className="footer">
         <img id="uneteFooter" className="uneteFooter" onMouseOut={changeUneteFooter0} onMouseOver={changeUneteFooter1} onClick={toggleModalUnete} src={uneteFooter} alt="uneteFooter"></img>
         <img className="logoFooter" src={logoFooter} alt="logoFooter"></img> 
         <p className="siguenos animated infinite pulse delay-2s ">Síguenos</p>
-        <img className="instagram" id="instagram" onMouseOut={changeI0} onMouseOver={changeI1} src={instagram} alt="instagram"></img>
-        <img className="facebook"  id="facebook" onMouseOut={changeF0} onMouseOver={changeF1} src={facebook} alt="facebook"></img>
-        <img className="twitter"  id="twitter" onMouseOut={changeT0} onMouseOver={changeT1} src={twitter} alt="twitter"></img>
+        <img  onClick={openInstagram} className="instagram" id="instagram" onMouseOut={changeI0} onMouseOver={changeI1} src={instagram} alt="instagram"></img>
+        <img  onClick={openFacebook} className="facebook"  id="facebook" onMouseOut={changeF0} onMouseOver={changeF1} src={facebook} alt="facebook"></img>
+        <img  onClick={openTwitter} className="twitter"  id="twitter" onMouseOut={changeT0} onMouseOver={changeT1} src={twitter} alt="twitter"></img>
       </div>
+
+ 
 
 
 
