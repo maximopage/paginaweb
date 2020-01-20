@@ -86,6 +86,8 @@ function App() {
     if(ValidateEmail(email.value)){
       if(name.value.includes(' ') && name.value.split(" ").length>1 ){
         if(name.value.split(" ")[0]!=="" && name.value.split(" ")[1]!==""){
+          toggleModalUnete()
+          toggleModalEnviado()
           sendFeedback()
         }
         else{
@@ -166,7 +168,14 @@ function App() {
 
   const toggleModalUnete = () => {
     setModalUnete(!modalUnete);
+  }
+
+  const [modalEnviado, setModalEnviado] = useState(false);
+
+  const toggleModalEnviado = () => {
+    setModalEnviado(!modalEnviado);
   }   
+
 
 
   return (
@@ -386,6 +395,20 @@ function App() {
             </ModalBody>
             <ModalFooter className="modalFooter" >
               <Button color="secondary" onClick={toggleModalUnete}>Cerrar</Button>
+            </ModalFooter>
+          </Modal>
+
+    {/* modal correo enviado */}
+
+    {/* <Button color="warning" onClick={toggleModalUnete}>Cargos Ocupados</Button> */}
+    <Modal className="modalEnviadoContent" isOpen={modalEnviado} toggle={toggleModalEnviado} >
+            <ModalHeader className="modalHeader" toggle={toggleModalEnviado}></ModalHeader>
+            <ModalBody>
+              <p className="textModalEnviado1">Muchas Gracias!!</p>            
+              <p className="textModalEnviado2">Su solicitud ha sido enviada exitosamente.</p>
+            </ModalBody>
+            <ModalFooter className="modalEnviadoFooter" >
+              <Button color="warning" onClick={toggleModalEnviado}>Entendido!</Button>
             </ModalFooter>
           </Modal>
 
