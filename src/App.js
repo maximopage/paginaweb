@@ -19,8 +19,8 @@ import facebookAmarillo from './Assets/facebookAmarillo.svg';
 import modalUneteImg from './Assets/modalUnete.svg';
 import modalUneteEnviar from './Assets/modalUneteEnviar.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
-import './App.css';
 import Recaptcha from 'react-recaptcha';
+import './App.css';
 import {
   Collapse,
   Navbar,
@@ -159,7 +159,7 @@ function App() {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
-    console.log(Recaptcha)
+    //console.log(Recaptcha)
     setModal(!modal);
   } 
 
@@ -399,7 +399,11 @@ function App() {
           </Modal>
 
     {/* modal correo enviado */}
-
+    <Recaptcha
+      sitekey="6LdaYtEUAAAAAGIpnw86j-N5Sz15Iz5fIdziIqsm"
+      render="explicit"
+      onloadCallback={alert("captcha")}
+    />
     {/* <Button color="warning" onClick={toggleModalUnete}>Cargos Ocupados</Button> */}
     <Modal className="modalEnviadoContent" isOpen={modalEnviado} toggle={toggleModalEnviado} >
             <ModalHeader className="modalHeader" toggle={toggleModalEnviado}></ModalHeader>
