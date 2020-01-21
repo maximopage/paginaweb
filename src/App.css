@@ -358,7 +358,7 @@ margin-right: 23px;
 }
 
 .listaAreas{
-  margin-left: 2% !important;
+  margin-left: 2% ;
   margin-top: 55px;
 }
 .primerItemAreas{
@@ -897,4 +897,11 @@ display: block;
     width: 60vw;
   }
 
+}
+
+
+@media (min-width: 1800px){
+  .listaAreas {
+    margin-left: 19% !important;
+  }
 }

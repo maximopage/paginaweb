@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import logo from './Assets/logo.svg';
 import navUnete from './Assets/navUnete.svg';
 import variosLayer from './Assets/variosLayer.svg';
@@ -19,7 +19,7 @@ import facebookAmarillo from './Assets/facebookAmarillo.svg';
 import modalUneteImg from './Assets/modalUnete.svg';
 import modalUneteEnviar from './Assets/modalUneteEnviar.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
-import Recaptcha from 'react-recaptcha';
+import { loadReCaptcha, ReCaptcha } from "react-recaptcha-google";
 import './App.css';
 import {
   Collapse,
@@ -42,6 +42,10 @@ import {
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  var recaptcha = React.createRef();
+  useEffect(() => {
+    loadReCaptcha();
+  });
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -398,13 +402,16 @@ function App() {
             </ModalFooter>
           </Modal>
 
+          <ReCaptcha
+          ref={recaptcha}
+          sitekey="6LdaYtEUAAAAAGIpnw86j-N5Sz15Iz5fIdziIqsm"
+          onSuccess={token => console.log(token)}
+          onError={console.error.bind(console)}
+          onLoad={() => {
+            console.log("hey")
+          }}/>
     {/* modal correo enviado */}
-    <Recaptcha
-      sitekey="6LdaYtEUAAAAAGIpnw86j-N5Sz15Iz5fIdziIqsm"
-      render="explicit"
-      //onloadCallback={alert("captcha")}
-      verifyCallback={alert("verify")}
-    />
+
     {/* <Button color="warning" onClick={toggleModalUnete}>Cargos Ocupados</Button> */}
     <Modal className="modalEnviadoContent" isOpen={modalEnviado} toggle={toggleModalEnviado} >
             <ModalHeader className="modalHeader" toggle={toggleModalEnviado}></ModalHeader>
