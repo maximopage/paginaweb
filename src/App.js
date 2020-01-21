@@ -402,7 +402,8 @@ function App() {
     <Recaptcha
       sitekey="6LdaYtEUAAAAAGIpnw86j-N5Sz15Iz5fIdziIqsm"
       render="explicit"
-      onloadCallback={alert("captcha")}
+      //onloadCallback={alert("captcha")}
+      verifyCallback={alert("verify")}
     />
     {/* <Button color="warning" onClick={toggleModalUnete}>Cargos Ocupados</Button> */}
     <Modal className="modalEnviadoContent" isOpen={modalEnviado} toggle={toggleModalEnviado} >
