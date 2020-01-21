@@ -239,7 +239,7 @@ margin-right: auto;
 
 .lineaAmarilla{
   width: 102px;
-  margin-left: auto;
+  margin-left: 32%;
   margin-right: auto;
   height: 1px;
   margin-top: -9px;
@@ -249,12 +249,12 @@ margin-right: auto;
 .hist1{
   margin-top: 50px;
   margin-left: 28px;
-  width: 222px;
+  
 }
 .hist2{
   margin-top: 50px;
   margin-left: 28px;
-  width: 222px;
+  
   margin-left: 54px;
 }
 
@@ -263,7 +263,7 @@ margin-right: auto;
   width: 1px;
   background-color: #e3b419;
   height: 239px;
-  margin-left: 43px;
+  margin-left: 13px;
   margin-top: 30px;
 }
 
@@ -503,25 +503,25 @@ line-height: 47.46px;
 font-family: Montserrat-light;
 font-weight: 300;
 display: block;
-    margin-top: -5.3%;
-    margin-left: 60%;
+margin-top: -54px;
+margin-left: 60%;
 }
 
 .instagram{
   height: 42px;
-  margin-top: -4.4%;
+  margin-top: -60px;
   margin-left: 73%;
   position: absolute;
 }
 .facebook{
   height: 42px;
-  margin-top: -4.4%;
+  margin-top: -60px;
   margin-left: 80%;
   position: absolute;
 }
 .twitter{
   height: 42px;
-  margin-top: -4.4%;
+  margin-top: -60px;
   margin-left: 85%;
   position: absolute;
 }
@@ -900,8 +900,133 @@ display: block;
 }
 
 
+
+
+
+
+/* alta resolucion */
 @media (min-width: 1800px){
+
+
+  .navbar-nav .nav-link {
+    font-size: 1.5rem !important;
+  }
+
+  .experienciaTitulo {
+    font-size: 3rem;
+  }
+
+  .historia {
+    margin-left: 0px !important;
+    margin-top: 4%;
+  }
+
+  .lineaVertical{
+    margin-left: 120px !important;
+    width: 2px;
+    height: 291px !important;
+  }
+  .lineaAmarilla{
+    height: 2px;
+    width: 155px;
+    margin-left: 48%;
+  }
+  .lineaAmarilla.lineaaux {
+    margin-left: 100px;
+  }
+  .fecha{
+    font-size: 1.6rem;
+    width: 370px;
+  }
+  .fechaTexto {
+    width: 370px !important;
+    font-size: 1.2rem;
+    line-height: 22.3px;
+  }
+
+  .hist2 {
+    margin-left: 150px;
+  }
+
+  .subtituloHistoria{
+    font-size: 2.3rem;
+    margin-left: 50px;
+    margin-top: 114px;
+  }
+  .subtextoHistoria {
+    margin-left: 51px;
+    font-size: 1.4rem;
+    line-height: 27.85px;
+    margin-top: 60px;
+   }
+
+   .conocemeTxt{
+    font-size: 1.6rem;
+   }
+
+  .tituloAreasInteres{
+    font-size: 4.5rem;
+    margin-top: 50px;
+  }
+
+  .itemAreas {
+    font-size: 3rem;
+    line-height: 64.96px;
+  }
+
   .listaAreas {
     margin-left: 19% !important;
+    margin-top: 6%;
   }
+
+  .segundoItemAreas {
+    margin-left: 185px;
+  }
+
+  .primerItemAreas {
+    margin-left: -105px;
+  }
+
+  .tituloPrincipios {
+    font-size: 4rem;
+  }
+
+  .principiosSubtitle {
+    font-size: 2.5rem;
+  }
+
+  .principios1 {
+    width: 155px;
+  }
+
+  .principios2 {
+    width: 190px;
+  }
+
+  .principios3 {
+    width: 189px;
+  }
+
+  .principios4 {
+    width: 254px;
+    margin-top: 20px;
+  }
+
+  .twitter{
+    margin-top: -65px;
+    height: 60px;
+  }
+  .facebook{
+    margin-top: -65px;
+    height: 60px;
+  }
+  .instagram{
+    margin-top: -65px;
+    height: 60px;
+  }
+
+  .siguenos{
+    margin-top: -60px;
+  }
+
 }

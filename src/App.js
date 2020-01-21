@@ -253,7 +253,7 @@ function App() {
                   <p className="fecha">1995 - 1999</p>
                   <p className="fechaTexto">Jefe de la División de Regiones de la Fiscalía General de Cedulación
                   del Consejo Nacional Electoral. </p>
-                  <div className="lineaAmarilla"></div>
+                  <div className="lineaAmarilla lineaaux"></div>
                 </div>
               </Col>
             </Row>
@@ -269,7 +269,7 @@ function App() {
                 <div className="hist2">
                   <p className="fecha">2000 - 2017</p>
                   <p className="fechaTexto">Concejal Metropolitano de Caracas</p>
-                  <div className="lineaAmarilla"></div>
+                  <div className="lineaAmarilla lineaaux"></div>
                 </div>
               </Col>
             </Row>
@@ -402,14 +402,13 @@ function App() {
             </ModalFooter>
           </Modal>
 
-          <ReCaptcha
+          {/* <ReCaptcha
           ref={recaptcha}
           sitekey="6LdaYtEUAAAAAGIpnw86j-N5Sz15Iz5fIdziIqsm"
-          onSuccess={token => console.log(token)}
           onError={console.error.bind(console)}
           onLoad={() => {
             console.log("hey")
-          }}/>
+          }}/> */}
     {/* modal correo enviado */}
 
     {/* <Button color="warning" onClick={toggleModalUnete}>Cargos Ocupados</Button> */}
