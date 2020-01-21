@@ -15,6 +15,10 @@
   src: url('./fonts/Montserrat-Light.otf');
 }
 
+body{
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
 .App {
   /* text-align: center; */
 }
@@ -143,7 +147,7 @@ a.nav-link:hover {
   /* Style for "Conóceme" */
 color: #080744;
 font-family:  Montserrat-Bold !important;
-font-size: 35px;
+font-size: 3rem;
 font-weight: 700;
 line-height: 61px;
 margin-left: auto;
@@ -157,7 +161,7 @@ margin-right: auto;
   text-align: center;
   color: #e3b419;
   font-family: Montserrat-regular !important;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1.12px;
   line-height: 35.6px;
@@ -192,7 +196,7 @@ margin-right: auto;
 .experienciaTitulo{
   color: #ffffff;
   font-family: "Montserrat - Bold";
-  font-size: 31px;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 61px;
   /* Text style for "Experienci" */
@@ -207,7 +211,7 @@ margin-right: auto;
   color: #ffffff;
   width: 222px;
   font-family: "Montserrat - Bold";
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 1.68px;
   line-height: 24.16px;
@@ -222,7 +226,7 @@ margin-right: auto;
   width: 222px;
   color: #ffffff;
   font-family: "Montserrat - Regular";
-  font-size: 12px;
+  font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.88px;
   line-height: 13.3px;
@@ -267,8 +271,8 @@ margin-right: auto;
   position: absolute;
   width: 284px;
   margin-top: 150px;
-  /* margin-right: -144px; */
-  right: -149px;
+  right: -11%;
+  overflow: hidden !important;
 }
 
 .subtituloHistoria{
@@ -276,7 +280,7 @@ margin-right: auto;
   width: 393px;
   color: #ffffff;
   font-family: "Montserrat - Bold";
-  font-size: 21px;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 61px;
   /* Text style for "Cargos Ocu" */
@@ -292,7 +296,7 @@ margin-right: auto;
   width: 90%;
   color: #ffffff;
   font-family: "Montserrat - Regular";
-  font-size: 10px;
+  font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 1.8px;
   line-height: 16.85px;
@@ -329,7 +333,7 @@ margin-top: -2px;
   /* Style for "Áreas de i" */
 color: #080744;
 font-family: "Montserrat - Bold";
-font-size: 43px;
+font-size: 3rem;
 font-weight: 700;
 letter-spacing: 6.15px;
 line-height: 62.16px;
@@ -342,7 +346,7 @@ font-weight: 700;
 /* Style for "Seguridad" */
 color: #e3b419;
 font-family: "Montserrat - Bold";
-font-size: 29px;
+font-size: 2rem;
 font-weight: 700;
 letter-spacing: 4.17px;
 line-height: 30.96px;
@@ -383,7 +387,7 @@ background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 96%
   /* Style for "Principios" */
   height: 116px;
   color: #080744;
-  font-size: 51px;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 100.71px;
   /* Text style for "Principios" */
@@ -429,7 +433,7 @@ background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 96%
   width: 246px;
   height: 56px;
   color: #080744;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 47.46px;
   /* Text style for "Solidarida" */
@@ -796,7 +800,7 @@ display: block;
   }
   .itemAreas{
     text-align: center !important;
-    font-size: 25px !important;
+    font-size: 1.7rem !important;
     margin-right: 0px;
   }
   .areasInteres{
