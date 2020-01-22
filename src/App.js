@@ -242,17 +242,16 @@ function App() {
             <Row>
               <Col md="3">
                 <div className="hist1">
-                  <p className="fecha">1982 - 1983</p>
-                  <p className="fechaTexto">Supervisor Control de calidad Oficina de Estadística e Información </p>
+                  <p className="fecha">2020 </p>
+                  <p className="fechaTexto">Presidente del Consejo Municipal de Chacao. </p>
                   <div className="lineaAmarilla"></div>
                 </div>
               </Col>  
               <Col md="3">
                 <div className="lineaVertical"></div>
                 <div className="hist2">
-                  <p className="fecha">1995 - 1999</p>
-                  <p className="fechaTexto">Jefe de la División de Regiones de la Fiscalía General de Cedulación
-                  del Consejo Nacional Electoral. </p>
+                  <p className="fecha">2000 - 2004 y<br/> 2008 - 2017</p>
+                  <p className="fechaTexto">Concejal Metropolitano de Caracas. </p>
                   <div className="lineaAmarilla lineaaux"></div>
                 </div>
               </Col>
@@ -260,28 +259,32 @@ function App() {
             <Row>
               <Col md="3">
                 <div className="hist1">
-                  <p className="fecha">1991 - 1995</p>
-                  <p className="fechaTexto">Director de la Oficina de Identificación y Extranjeria  </p>
+                  <p className="fecha">2018 - 2019</p>
+                  <p className="fechaTexto">Secretario de Gobierno del Municipio Chacao. </p>
                   <div className="lineaAmarilla"></div>
                 </div>
               </Col>
               <Col md="3">
                 <div className="hist2">
-                  <p className="fecha">2000 - 2017</p>
-                  <p className="fechaTexto">Concejal Metropolitano de Caracas</p>
+                  <p className="fecha">1995 - 1999</p>
+                  <p className="fechaTexto">Jefe de la División de Regiones de la Fiscalía General de Cedulación del Consejo Nacional Electoral.</p>
                   <div className="lineaAmarilla lineaaux"></div>
                 </div>
               </Col>
             </Row>
           </Container>
           <p className="subtituloHistoria">Cargos Ocupados: </p>
-          <p className="subtextoHistoria">Secretario General del Cabildo Metropolitano de Caracas | Presidente de 
-          la Comisión de Legislación del Cabildo Metropolitano de Caracas | Jefe de la Fracción Parlamentaria 
-          del Movimiento Primero Justicia Secretario Nacional de Organización del Movimiento Primero Justicia 
-          (2007-2008). | Miembro Directivo de la Fundación Justicia y Democracia. (2008-2009) | Jefe de Campaña 
-          del Alcalde Ramón Muchacho (2013). Jefe de Campaña del Alcalde Gustavo Duque (2017) | Presidente del
-          Colegio de Politólogos de Venezuela (Actualmente) | Miembro de la Dirección Nacional del Movimiento Primero 
-          Justicia (Actualmente) | Secretario de Gobierno del Municipio Chacao (Actualmente)</p>
+          <p className="subtextoHistoria"> 
+            Secretario General del Cabildo Metropolitano de Caracas |
+            Presidente de la Comisión de Legislación del Cabildo Metropolitano de Caracas | 
+            Jefe de la Fracción Parlamentaria del Movimiento Primero Justicia |
+            Secretario Nacional de Organización del Movimiento Primero Justicia (2007-2008). |
+            Miembro Directivo de la Fundación Justicia y Democracia. (2008-2009) | 
+            Jefe de Campaña del Alcalde Ramón Muchacho (2013). | 
+            Jefe de Campaña del Alcalde Gustavo Duque (2017) | 
+            Presidente del Colegio de Politólogos de Venezuela | 
+            Miembro de la Dirección Nacional del Movimiento Primero Justicia |
+            Secretario de Gobierno del Municipio Chacao</p>
           <div>
           <Button className="botonCargos" color="warning" onClick={toggleModal}>Cargos Ocupados</Button>
           <Modal isOpen={modal} toggle={toggleModal} >
@@ -294,9 +297,9 @@ function App() {
             <p className="itemModal"> Miembro Directivo de la Fundación Justicia y Democracia (2008-2009).</p> 
             <p className="itemModal"> Jefe de Campaña del Alcalde Ramón Muchacho (2013). </p> 
             <p className="itemModal"> Jefe de Campaña del Alcalde Gustavo Duque (2017). </p> 
-            <p className="itemModal"> Presidente del Colegio de Politólogos de Venezuela (Actualmente). </p> 
-            <p className="itemModal"> Miembro de la Dirección Nacional del Movimiento Primero Justicia (Actualmente).</p> 
-            <p className="itemModal"> Secretario de Gobierno del Municipio Chacao (Actualmente).</p> 
+            <p className="itemModal"> Presidente del Colegio de Politólogos de Venezuela. </p> 
+            <p className="itemModal"> Miembro de la Dirección Nacional del Movimiento Primero Justicia.</p> 
+            <p className="itemModal"> Secretario de Gobierno del Municipio Chacao.</p> 
             </ModalBody>
             <ModalFooter>
               <Button className="cerrarBtn" color="warning" onClick={toggleModal}>Cerrar</Button>
