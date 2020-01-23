@@ -427,7 +427,7 @@ function App() {
               <Button color="warning" onClick={toggleModalEnviado}>Entendido!</Button>
             </ModalFooter>
           </Modal>
-          <Circle />
+          <Circle color={'#e3b419'} background="#00000e"/>
     </div>
   );
 }
