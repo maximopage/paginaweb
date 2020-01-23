@@ -254,7 +254,7 @@ function App() {
               <Col md="3">
                 <div className="hist1">
                   <p className="fecha">2020 </p>
-                  <p className="fechaTexto">Presidente del Consejo Municipal de Chacao. </p>
+                  <p className="fechaTexto">Presidente del Concejo Municipal de Chacao. </p>
                   <div className="lineaAmarilla"></div>
                 </div>
               </Col>  
@@ -271,14 +271,14 @@ function App() {
               <Col md="3">
                 <div className="hist1">
                   <p className="fecha">2018 - 2019</p>
-                  <p className="fechaTexto">Secretario de Gobierno del Municipio Chacao. </p>
+                  <p className="fechaTexto">Secretario de Gobierno de la Alcaldía del Municipio Chacao. </p>
                   <div className="lineaAmarilla"></div>
                 </div>
               </Col>
               <Col md="3">
                 <div className="hist2">
                   <p className="fecha">1995 - 1999</p>
-                  <p className="fechaTexto">Jefe de la División de Regiones de la Fiscalía General de Cedulación del Consejo Nacional Electoral.</p>
+                  <p className="fechaTexto">Jefe de la División de Regiones de la Fiscalía General de Cedulación del Concejo Nacional Electoral.</p>
                   <div className="lineaAmarilla lineaaux"></div>
                 </div>
               </Col>
@@ -295,7 +295,7 @@ function App() {
             Jefe de Campaña del Alcalde Gustavo Duque (2017) | 
             Presidente del Colegio de Politólogos de Venezuela | 
             Miembro de la Dirección Nacional del Movimiento Primero Justicia |
-            Secretario de Gobierno del Municipio Chacao</p>
+            Secretario de Gobierno de la Alcaldía del Municipio Chacao</p>
           <div>
           <Button className="botonCargos" color="warning" onClick={toggleModal}>Cargos Ocupados</Button>
           <Modal isOpen={modal} toggle={toggleModal} >
