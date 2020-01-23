@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import logo from './Assets/logo.svg';
 import navUnete from './Assets/navUnete.svg';
 import variosLayer from './Assets/variosLayer.svg';
-import imagenPrincipal from './Assets/imagenPrincipal.png'; 
+import imagenPrincipal from './Assets/Optimized-imagenPrincipal_large2.png'; 
 import imagenConoceme from './Assets/imagenConoceme.png';
 import principios1 from './Assets/principios1.svg';
 import principios2 from './Assets/principios2.svg';
@@ -352,19 +352,19 @@ function App() {
           <Row className="rowPrincipios">
             <Col className="principios1Col"  md="3"> 
               <img className="principios1" src={principios1} alt="principios1"></img>
-              <p className="principiosSubtitle principiosSubtittle1">Solidaridad</p>
+              <p className="principiosSubtitle principiosSubtittle1">Trabajo</p>
             </Col>
             <Col className="principios2Col" md="3"> 
               <img className="principios2" src={principios2} alt="principios2"></img>
-              <p className="principiosSubtitle principiosSubtittle2">Igualdad</p>
+              <p className="principiosSubtitle principiosSubtittle2">Justicia</p>
             </Col>
             <Col className="principios3Col" md="3"> 
               <img className="principios3" src={principios3} alt="principios3"></img>
-              <p className="principiosSubtitle principiosSubtittle3">Libertad</p>
+              <p className="principiosSubtitle principiosSubtittle3">Honestidad</p>
             </Col>
             <Col className="principios4Col" md="3"> 
               <img className="principios4" src={principios4} alt="principios4"></img>
-              <p className="principiosSubtitle principiosSubtittle4">Progreso</p>
+              <p className="principiosSubtitle principiosSubtittle4">Gerencia</p>
             </Col>
           </Row>
         </div>
