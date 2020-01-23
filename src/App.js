@@ -2,7 +2,6 @@ import React, { useState, useEffect} from 'react';
 import logo from './Assets/logo.svg';
 import navUnete from './Assets/navUnete.svg';
 import variosLayer from './Assets/variosLayer.svg';
-import imagenPrincipal from './Assets/Optimized-imagenPrincipal_large2.png'; 
 import imagenConoceme from './Assets/imagenConoceme.png';
 import principios1 from './Assets/principios1.svg';
 import principios2 from './Assets/principios2.svg';

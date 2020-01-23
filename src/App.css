@@ -693,8 +693,13 @@ margin-left: 55%;
   .enviarModal{
     transform: scale(0.5,0.5);
     left: 40%;
-    top: 66%;
+    top: 65%;
   }
+
+  .textUneteModal {
+    top: 17%;
+  }
+
   .uneteMobile{
     display: inline;
     margin-top: 19px;
@@ -913,7 +918,12 @@ margin-left: 55%;
     margin-top: 45%;
   }
   #nombre {
-    width: 60vw;
+    width: 53vw;
+    top: 30%;
+  }
+
+  #email{
+    top: 51%;
   }
 
 }
