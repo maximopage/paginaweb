@@ -195,7 +195,9 @@ function App() {
 
   return (
     <div className="App">
-
+      <h1 hidden>maximo sanchez</h1>
+      <h2 hidden>maximo sanchez</h2>
+      <h3 hidden>maximo sanchez</h3>
       <Navbar className="rectangulo" color="light" light expand="md">
         <NavbarBrand href="/"> <img className="logo" src={logo} alt="logo"></img></NavbarBrand>
         <NavbarToggler onClick={toggle} />
