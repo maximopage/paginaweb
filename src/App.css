@@ -179,7 +179,7 @@ margin-right: auto;
 }
 
 .imagenExperiencia{
-  background-image: url(./Assets/Optimized-imagenExperiencia.png) ;
+  background-image: url(https://maximoimage.s3.us-east-2.amazonaws.com/imagenes/imagenExperienciaV2.png) ;
   background-attachment: fixed;
   background-position: center 1%;
   background-size: cover;
@@ -319,7 +319,7 @@ margin-top: -2px;
 }
 
 .areasInteres{
-  background-image: url(./Assets/Optimized-imagenAreas2.png) ;
+  background-image: url(https://maximoimage.s3.us-east-2.amazonaws.com/imagenes/Optimized-imagenAreas2.png) ;
   /* background-attachment: fixed; */
   background-position: center center;
   background-size: cover;
@@ -463,7 +463,7 @@ background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 96%
   background-color: #e3b419;
 }
 .imagenGrupo{
-  background-image: url(./Assets/Optimized-imagenGrupo.png) ;
+  background-image: url(https://maximoimage.s3.us-east-2.amazonaws.com/imagenes/imagenGrupoV2.png) ;
   width: 100vw;
   height: 50vh;
   background-position: center center;

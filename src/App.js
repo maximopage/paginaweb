@@ -20,6 +20,7 @@ import modalUneteImg from './Assets/modalUnete.svg';
 import modalUneteEnviar from './Assets/modalUneteEnviar.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { loadReCaptcha, ReCaptcha } from "react-recaptcha-google";
+import {Circle} from 'react-preloaders';
 import './App.css';
 import {
   Collapse,
@@ -210,7 +211,7 @@ function App() {
         </Collapse>
       </Navbar>
       <div className="fondoAmarillo">
-        <img className="imagenPrincipal" src={imagenPrincipal} alt="imagenPrincipal"></img>
+        <img className="imagenPrincipal" src="https://maximoimage.s3.us-east-2.amazonaws.com/imagenes/Optimized-imagenPrincipal_large2.png" alt="imagenPrincipal"></img>
       </div>
       <ScrollAnimation delay={500}  animateOnce={true} animateIn='fadeIn'>
 
@@ -426,7 +427,7 @@ function App() {
               <Button color="warning" onClick={toggleModalEnviado}>Entendido!</Button>
             </ModalFooter>
           </Modal>
-
+          <Circle />
     </div>
   );
 }
