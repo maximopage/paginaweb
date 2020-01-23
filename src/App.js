@@ -221,12 +221,12 @@ function App() {
         </Collapse>
       </Navbar>
       <div className="fondoAmarillo">
-        <img className="imagenPrincipal" src="https://maximoimage.s3.us-east-2.amazonaws.com/imagenes/Optimized-imagenPrincipal_large2.png" alt="imagenPrincipal"></img>
+        <img className="imagenPrincipal" src="https://maximoimage.s3.us-east-2.amazonaws.com/imagenes/Optimized-imagenPrincipal_large2.png" alt="maximo sanchez imagenPrincipal"></img>
       </div>
       <ScrollAnimation delay={500}  animateOnce={true} animateIn='fadeIn'>
 
       <div id="conoceme" className="conoceme">
-        <img className="imagenConoceme" src={imagenConoceme} alt="imagenConoceme"></img>
+        <img className="imagenConoceme" src={imagenConoceme} alt="maximo sanchez conoceme"></img>
         <p className="conocemeTitulo">Conóceme</p>
         <p className="conocemeTxt">
           Máximo Sánchez Brandt es un político de centro, graduado 
