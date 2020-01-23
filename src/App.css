@@ -681,7 +681,11 @@ margin-left: 60%;
 @media (max-width: 768px){
 
 
-  
+  .enviarModal{
+    transform: scale(0.5,0.5);
+    left: 40%;
+    top: 66%;
+  }
   .uneteMobile{
     display: inline;
     margin-top: 19px;
