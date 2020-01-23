@@ -556,7 +556,7 @@ margin-left: 60%;
   left: 6%;
   top: 41%;
   font-size: 3.8vw;
-  width: 55vw;
+  width: 53vw;
 }
 
 #email{
@@ -565,7 +565,7 @@ margin-left: 60%;
   top: 40%;
   font-size: 2.5vw;
   top: 58%;
-  width: 51vw;
+  width: 50vw;
 }
 
 .textUneteModal{
@@ -638,21 +638,19 @@ margin-left: 60%;
 }
 
 .enviarModal{
-  left: 80%;
+  left: 51%;
   font-family: Montserrat-Bold !important;
   position: absolute;
-  top: 45%;
+  top: 75%;
   font-size: 3vw;
   color: white;
   display: none;
 }
 
-.enviarModal:hover {
+/* .enviarModal:hover {
   font-size: 4vw;
-  top: 43%;
-  left: 77%;
   cursor: pointer;
-}
+} */
 
 .uneteMobile{
   display: none;

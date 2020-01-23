@@ -398,7 +398,8 @@ function App() {
               <Input onChange={changeUnete} className="inputModal" type="text" name="nombre" id="nombre" placeholder="Tu nombre y apellido aquí" />
               <Input onChange={changeUnete} className="inputModal" type="email" name="email" id="email" placeholder="Tu correo aquí" />
               <p className="textUneteModal">Únete</p>
-              <p id="enviarModal" onClick={enviarModal} className="enviarModal">Enviar</p>
+              <Button id="enviarModal" color="warning" className="enviarModal" onClick={enviarModal}>Enviar</Button>
+              {/* <p id="enviarModal" onClick={enviarModal} className="enviarModal">Enviar</p> */}
             </ModalBody>
             <ModalFooter className="modalFooter" >
               <Button color="secondary" onClick={toggleModalUnete}>Cerrar</Button>
