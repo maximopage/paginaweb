@@ -13,6 +13,8 @@ import logoFooter from './Assets/logoFooter.svg';
 import instagram from './Assets/instagram.svg';
 import twitter from './Assets/twitter.svg';
 import facebook from './Assets/facebook.svg';
+import youtube from './Assets/youtube.svg';
+import youtubeAmarillo from './Assets/youtubeAmarillo.svg';
 import instagramAmarillo from './Assets/instagramAmarillo.svg';
 import twitterAmarillo from './Assets/twitterAmarillo.svg';
 import facebookAmarillo from './Assets/facebookAmarillo.svg';
@@ -83,6 +85,9 @@ function App() {
   const openTwitter = () => {
     window.open("https://twitter.com/maximo_sanchez?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor");
   }
+  const openYoutube = () => {
+    window.open("https://www.youtube.com/channel/UC-eLa_ksByM7m0OZQMbhCQA");
+  }
 
   const enviarModal = () => {
     var name = document.getElementById('nombre')
@@ -134,6 +139,12 @@ function App() {
     }
     const changeF1 = () => {
       document.getElementById("facebook").src = facebookAmarillo;
+    }
+    const changeY0 = () => {
+      document.getElementById("youtube").src = youtube;
+    }
+    const changeY1 = () => {
+      document.getElementById("youtube").src = youtubeAmarillo;
     }
 
   const changeUneteHeader1 = () => {
@@ -382,6 +393,7 @@ function App() {
         <img  onClick={openInstagram} className="instagram" id="instagram" onMouseOut={changeI0} onMouseOver={changeI1} src={instagram} alt="instagram"></img>
         <img  onClick={openFacebook} className="facebook"  id="facebook" onMouseOut={changeF0} onMouseOver={changeF1} src={facebook} alt="facebook"></img>
         <img  onClick={openTwitter} className="twitter"  id="twitter" onMouseOut={changeT0} onMouseOver={changeT1} src={twitter} alt="twitter"></img>
+        <img  onClick={openYoutube} className="youtube"  id="youtube" onMouseOut={changeY0} onMouseOver={changeY1} src={youtube} alt="youtube"></img>
       </div>
 
  

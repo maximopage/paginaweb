@@ -515,6 +515,12 @@ margin-left: 55%;
   margin-left: 69%;
   position: absolute;
 }
+.youtube{
+  height: 42px;
+  margin-top: -60px;
+  margin-left: 89%;
+  position: absolute;
+}
 .facebook{
   height: 42px;
   margin-top: -60px;
@@ -529,6 +535,9 @@ margin-left: 55%;
 }
 
 .instagram:hover{
+  cursor: pointer;
+}
+.youtube:hover{
   cursor: pointer;
 }
 .facebook:hover{
@@ -873,19 +882,25 @@ margin-left: 55%;
   
   .instagram{
     height: 42px;
-    margin-left: 22%;
+    margin-left: 12%;
+    margin-top: 5%;
+    position: relative;
+  }
+  .youtube{
+    height: 42px;
+    margin-left: 12%;
     margin-top: 5%;
     position: relative;
   }
   .facebook{
     height: 42px;
-    margin-left: 15%;
+    margin-left: 12%;
     margin-top: 5%;
     position: relative;
   }
   .twitter{
     height: 42px;
-    margin-left: 15%;
+    margin-left: 12%;
     margin-top: 5%;
     position: relative;
   }
