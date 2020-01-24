@@ -15,6 +15,9 @@
   src: url('./fonts/Montserrat-Light.otf');
 }
 
+.seo{
+  display:none;
+}
 body{
   overflow-x: hidden !important;
   width: 100% !important;
