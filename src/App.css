@@ -18,6 +18,11 @@
 .seo{
   display:none;
 }
+
+.modalExp .modal-content{
+  background-image: radial-gradient(840px 840px at 0% 0%, #051739 0%, #020e29 17%, #000518 42%, #000212 60%, #000111 64%, #00000e 98%);
+  color:white;
+}
 body{
   overflow-x: hidden !important;
   width: 100% !important;
@@ -138,6 +143,7 @@ a.nav-link:hover {
 .imagenConoceme{
   width: 141px;
   margin-top: 150px;
+  border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
 }

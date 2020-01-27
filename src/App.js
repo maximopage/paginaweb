@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import logo from './Assets/logo.svg';
 import navUnete from './Assets/navUnete.svg';
 import variosLayer from './Assets/variosLayer.svg';
-import imagenConoceme from './Assets/imagenConoceme.png';
+import imagenConoceme from './Assets/imgConoceme.jpg';
 import principios1 from './Assets/principios1.svg';
 import principios2 from './Assets/principios2.svg';
 import principios3 from './Assets/principios3.svg';
@@ -233,7 +233,7 @@ function App() {
         <p className="conocemeTxt">
           Máximo Sánchez Brandt es un político de centro, graduado 
           de la Universidad Central de Venezuela. Ha desempeñado distintos 
-          cargos políticos y administrativos para varios entes públicos.
+          cargos para varios entes públicos.
         </p>
       </div>
  
@@ -288,21 +288,23 @@ function App() {
           </Container>
           <p className="subtituloHistoria">Cargos Ocupados: </p>
           <p className="subtextoHistoria"> 
+            Licenciado en Ciencias Políticas y Administrativas (Politólogo) 1991 |
             Secretario General del Cabildo Metropolitano de Caracas |
             Presidente de la Comisión de Legislación del Cabildo Metropolitano de Caracas | 
             Jefe de la Fracción Parlamentaria del Movimiento Primero Justicia |
-            Secretario Nacional de Organización del Movimiento Primero Justicia (2007-2008). |
+            Secretario Nacional de Organización del Movimiento Primero Justicia (2007-2008) |
             Miembro Directivo de la Fundación Justicia y Democracia. (2008-2009) | 
-            Jefe de Campaña del Alcalde Ramón Muchacho (2013). | 
+            Jefe de Campaña del Alcalde Ramón Muchacho (2013) | 
             Jefe de Campaña del Alcalde Gustavo Duque (2017) | 
             Presidente del Colegio de Politólogos de Venezuela | 
             Miembro de la Dirección Nacional del Movimiento Primero Justicia |
             Secretario de Gobierno de la Alcaldía del Municipio Chacao</p>
           <div>
           <Button className="botonCargos" color="warning" onClick={toggleModal}>Cargos Ocupados</Button>
-          <Modal isOpen={modal} toggle={toggleModal} >
+          <Modal className="modalExp" isOpen={modal} toggle={toggleModal} >
             <ModalHeader toggle={toggleModal}>Cargos Ocupados</ModalHeader>
             <ModalBody>
+            <p className="itemModal">Licenciado en Ciencias Políticas y Administrativas (Politólogo) 1991.</p>
             <p className="itemModal">Secretario General del Cabildo Metropolitano de Caracas.</p>
             <p className="itemModal">Presidente de la Comisión de Legislación del Cabildo Metropolitano de Caracas.</p> 
             <p className="itemModal">Jefe de la Fracción Parlamentaria del Movimiento Primero Justicia.</p> 
