@@ -288,12 +288,15 @@ function App() {
           </Container>
           <p className="subtituloHistoria">Cargos Ocupados: </p>
           <p className="subtextoHistoria"> 
+            Presidente del Centro de estudiantes de la escuela de Estudios Políticos y Administrativo |
+            Representante estudiantil ante el concejo de escuela de la Escuela de Estudios Políticos y administrativos |
+            Representante estudiantil ante el concejo Universitario de la Universidad Central de Venezuela |
             Licenciado en Ciencias Políticas y Administrativas (Politólogo) 1991 |
             Secretario General del Cabildo Metropolitano de Caracas |
             Presidente de la Comisión de Legislación del Cabildo Metropolitano de Caracas | 
             Jefe de la Fracción Parlamentaria del Movimiento Primero Justicia |
             Secretario Nacional de Organización del Movimiento Primero Justicia (2007-2008) |
-            Miembro Directivo de la Fundación Justicia y Democracia. (2008-2009) | 
+            Miembro Directivo de la Fundación Justicia y Democracia (2008-2009) | 
             Jefe de Campaña del Alcalde Ramón Muchacho (2013) | 
             Jefe de Campaña del Alcalde Gustavo Duque (2017) | 
             Presidente del Colegio de Politólogos de Venezuela | 
@@ -304,6 +307,9 @@ function App() {
           <Modal className="modalExp" isOpen={modal} toggle={toggleModal} >
             <ModalHeader toggle={toggleModal}>Cargos Ocupados</ModalHeader>
             <ModalBody>
+            <p className="itemModal">Presidente del Centro de estudiantes de la escuela de Estudios Políticos y Administrativo.</p>
+            <p className="itemModal">Representante estudiantil ante el concejo de escuela de la Escuela de Estudios Políticos y administrativos.</p>
+            <p className="itemModal">Representante estudiantil ante el concejo Universitario de la Universidad Central de Venezuela.</p>
             <p className="itemModal">Licenciado en Ciencias Políticas y Administrativas (Politólogo) 1991.</p>
             <p className="itemModal">Secretario General del Cabildo Metropolitano de Caracas.</p>
             <p className="itemModal">Presidente de la Comisión de Legislación del Cabildo Metropolitano de Caracas.</p> 
