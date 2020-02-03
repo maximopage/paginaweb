@@ -255,7 +255,7 @@ function App() {
             <Row>
               <Col md="3">
                 <div className="hist1">
-                  <p className="fecha">2020 </p>
+                  <p className="fecha">2019 - 2020 </p>
                   <p className="fechaTexto">Presidente del Concejo Municipal de Chacao. </p>
                   <div className="lineaAmarilla"></div>
                 </div>
@@ -288,39 +288,41 @@ function App() {
           </Container>
           <p className="subtituloHistoria">Cargos Ocupados: </p>
           <p className="subtextoHistoria"> 
-            Presidente del Centro de estudiantes de la escuela de Estudios Políticos y Administrativo |
-            Representante estudiantil ante el concejo de escuela de la Escuela de Estudios Políticos y administrativos |
-            Representante estudiantil ante el concejo Universitario de la Universidad Central de Venezuela |
-            Licenciado en Ciencias Políticas y Administrativas (Politólogo) 1991 |
-            Secretario General del Cabildo Metropolitano de Caracas |
+            Jefe nacional de activismo político de Acción democrática |
+            Presidente del Centro de estudiantes de la escuela de Estudios Políticos y Administrativos | 
+            Representante estudiantil ante el concejo de escuela de la Escuela de Estudios Políticos y administrativos | 
+            Representante estudiantil ante el concejo Universitario de la Universidad Central de Venezuela | 
+            Licenciado en Ciencias Políticas y Administrativas (Politólogo) 1991 | 
+            Secretario General del Cabildo Metropolitano de Caracas | 
             Presidente de la Comisión de Legislación del Cabildo Metropolitano de Caracas | 
-            Jefe de la Fracción Parlamentaria del Movimiento Primero Justicia |
-            Secretario Nacional de Organización del Movimiento Primero Justicia (2007-2008) |
+            Jefe de la Fracción Parlamentaria del Movimiento Primero Justicia | 
+            Secretario Nacional de Organización del Movimiento Primero Justicia (2007-2008) | 
             Miembro Directivo de la Fundación Justicia y Democracia (2008-2009) | 
             Jefe de Campaña del Alcalde Ramón Muchacho (2013) | 
             Jefe de Campaña del Alcalde Gustavo Duque (2017) | 
             Presidente del Colegio de Politólogos de Venezuela | 
-            Miembro de la Dirección Nacional del Movimiento Primero Justicia |
+            Miembro de la Dirección Nacional del Movimiento Primero Justicia | 
             Secretario de Gobierno de la Alcaldía del Municipio Chacao</p>
           <div>
           <Button className="botonCargos" color="warning" onClick={toggleModal}>Cargos Ocupados</Button>
           <Modal className="modalExp" isOpen={modal} toggle={toggleModal} >
             <ModalHeader toggle={toggleModal}>Cargos Ocupados</ModalHeader>
             <ModalBody>
-            <p className="itemModal">Presidente del Centro de estudiantes de la escuela de Estudios Políticos y Administrativo.</p>
+            <p className="itemModal">Jefe nacional de activismo político de Acción democrática.</p>
+            <p className="itemModal">Presidente del Centro de estudiantes de la escuela de Estudios Políticos y Administrativos.</p>
             <p className="itemModal">Representante estudiantil ante el concejo de escuela de la Escuela de Estudios Políticos y administrativos.</p>
             <p className="itemModal">Representante estudiantil ante el concejo Universitario de la Universidad Central de Venezuela.</p>
             <p className="itemModal">Licenciado en Ciencias Políticas y Administrativas (Politólogo) 1991.</p>
-            <p className="itemModal">Secretario General del Cabildo Metropolitano de Caracas.</p>
+            <p className="itemModal">Secretario General del Cabildo Metropolitano de Caracas.</p> 
             <p className="itemModal">Presidente de la Comisión de Legislación del Cabildo Metropolitano de Caracas.</p> 
             <p className="itemModal">Jefe de la Fracción Parlamentaria del Movimiento Primero Justicia.</p> 
             <p className="itemModal">Secretario Nacional de Organización del Movimiento Primero Justicia (2007-2008).</p> 
-            <p className="itemModal"> Miembro Directivo de la Fundación Justicia y Democracia (2008-2009).</p> 
-            <p className="itemModal"> Jefe de Campaña del Alcalde Ramón Muchacho (2013). </p> 
-            <p className="itemModal"> Jefe de Campaña del Alcalde Gustavo Duque (2017). </p> 
-            <p className="itemModal"> Presidente del Colegio de Politólogos de Venezuela. </p> 
-            <p className="itemModal"> Miembro de la Dirección Nacional del Movimiento Primero Justicia.</p> 
-            <p className="itemModal"> Secretario de Gobierno del Municipio Chacao.</p> 
+            <p className="itemModal"> Miembro Directivo de la Fundación Justicia y Democracia (2008-2009).</p>
+            <p className="itemModal">Jefe de Campaña del Alcalde Ramón Muchacho (2013).</p> 
+            <p className="itemModal">Jefe de Campaña del Alcalde Gustavo Duque (2017)</p> 
+            <p className="itemModal">Presidente del Colegio de Politólogos de Venezuela. </p> 
+            <p className="itemModal">Miembro de la Dirección Nacional del Movimiento Primero Justicia.</p> 
+            <p className="itemModal">Secretario de Gobierno de la Alcaldía del Municipio Chacao.</p> 
             </ModalBody>
             <ModalFooter>
               <Button className="cerrarBtn" color="warning" onClick={toggleModal}>Cerrar</Button>
