@@ -20,7 +20,7 @@ import facebookAmarillo from './Assets/facebookAmarillo.svg';
 import modalUneteImg from './Assets/modalUnete.svg';
 import modalUneteEnviar from './Assets/modalUneteEnviar.svg';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { loadReCaptcha, ReCaptcha } from "react-recaptcha-google";
+// import { loadReCaptcha, ReCaptcha } from "react-recaptcha-google";
 import {Circle} from 'react-preloaders';
 import './App.css';
 import {
@@ -44,10 +44,10 @@ import {
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  var recaptcha = React.createRef();
-  useEffect(() => {
-    loadReCaptcha();
-  });
+  // var recaptcha = React.createRef();
+  // useEffect(() => {
+  //   loadReCaptcha();
+  // });
 
   const toggle = () => {
     setIsOpen(!isOpen);
